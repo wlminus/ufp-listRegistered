@@ -18,7 +18,7 @@ public class ListRegisteredResource {
         this.registerModelRepository = registerModelRepository;
     }
 
-    @GetMapping("/list")
+    @GetMapping("/registered")
     public List<RegisterModel> getRegistered(@RequestParam(value = "studentCode") String studentCode) {
         return registerModelRepository.findByStudentCode(studentCode);
     }
